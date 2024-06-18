@@ -1,0 +1,11 @@
+{
+    "name": "my-fullstack-app",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm start --prefix frontend\" \"npm run start --prefix backend\"",
+        "server": "node server/index.js"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
