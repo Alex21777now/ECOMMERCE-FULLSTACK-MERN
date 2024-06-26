@@ -21,6 +21,7 @@ const Home = () => {
       <VerticalCardProduct category={"speakers"} heading={"Bluetooth Speakers"}/>
       <VerticalCardProduct category={"refrigerator"} heading={"Refrigerator"}/>
       <VerticalCardProduct category={"trimmers"} heading={"Trimmers"}/>
+      <VerticalCardProduct category={"Машинки та транспорт"} heading={"Машинки та транспорт"}/>
     </div>
   )
 }

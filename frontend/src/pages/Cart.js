@@ -190,8 +190,9 @@ const Cart = () => {
                                         <p>Total Price</p>
                                         <p>{displayINRCurrency(totalPrice)}</p>    
                                     </div>
-
-                                    <button className='bg-blue-600 p-2 text-white w-full mt-2'>Payment</button>
+                                    <br/><br/>
+                                    <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>Введіть деталі доставки:</div>
+                                    <button className='bg-blue-600 hover:bg-blue-800 p-2 text-white w-full mt-2'>Підтвердити замовлення !</button>
 
                                 </div>
                             )
