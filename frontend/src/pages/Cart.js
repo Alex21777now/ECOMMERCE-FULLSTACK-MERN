@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import SummaryApi from '../common'
 import Context from '../context'
 import displayINRCurrency from '../helpers/displayCurrency'
+import ContactForm from './ContactForm';
 import { MdDelete } from "react-icons/md";
 
 const Cart = () => {
@@ -192,7 +193,11 @@ const Cart = () => {
                                     </div>
                                     <br/><br/>
                                     <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>Введіть деталі доставки:</div>
-                                    <button className='bg-blue-600 hover:bg-blue-800 p-2 text-white w-full mt-2'>Підтвердити замовлення !</button>
+                                    <br/>
+                                    <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>
+                                    <ContactForm />
+                                    </div>
+                                   {/* <button className='bg-blue-600 hover:bg-blue-800 p-2 text-white w-full mt-2'>Підтвердити замовлення !</button> */}
 
                                 </div>
                             )
