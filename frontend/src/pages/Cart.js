@@ -194,7 +194,7 @@ const Cart = () => {
                                     <br/><br/>
                                     <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>Введіть деталі доставки:</div>
                                     <br/>
-                                    <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>
+                                    <div>
                                     <ContactForm />
                                     </div>
                                    {/* <button className='bg-blue-600 hover:bg-blue-800 p-2 text-white w-full mt-2'>Підтвердити замовлення !</button> */}
