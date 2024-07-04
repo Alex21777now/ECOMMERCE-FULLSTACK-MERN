@@ -27,11 +27,11 @@ const ContactForm = () => {
     e.preventDefault();
     
     // EmailJS parameters
-    const serviceID = 'your_service_id';
-    const templateID = 'your_template_id';
-    const userID = 'your_user_id';
+    const serviceID = 'service_3tc7wn8';
+    const templateID = 'template_4y48xcs';
+    const userID = 'inSfK_JP_bAHE1siA'; // Public Key of the account    AcessToken = Private Key of the account
 
-    const emailParams = {
+    const templateParams = {
       ...formData,
       delivery: 'УКРПОШТА',
       deliveryCost: '0 грн',
@@ -39,7 +39,9 @@ const ContactForm = () => {
       payment: 'на відділенні Укрпошти при отриманні Замовлення',
     };
 
-    emailjs.send(serviceID, templateID, emailParams, userID)
+    
+
+    emailjs.send(serviceID, templateID, templateParams, userID)
       .then((result) => {
         console.log(result.text);
         alert('ВИ УСПІШНО ВІДПРАВИЛИ ЗАМОВЛЕННЯ! ПРИХОДЬТЕ ЗАБИРАТИ ЙОГО НА ВІДДІЛЕННЯ УКРПОШТИ КОЛИ ОТРИМАЄТЕ СМС ВІД УКРПОШТИ ЩО ПОСИЛКА ПРИЙШЛА');
