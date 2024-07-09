@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../ContactForm.css';
+import Cart from './Cart';
+//import {totalQty} from './Cart'
+import displayINRCurrency from '../helpers/displayCurrency'
 
-const ContactForm = () => {
+const ContactForm = ({totalQty}) => {
   const [formData, setFormData] = useState({
     product: '',
     lastName: '',
@@ -53,6 +56,10 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
+      {/*<div>
+        <label>Товар: ( Кількiсть штук Загалом)</label>
+        <input type="text" value={totalQty} readOnly style={{ backgroundColor: '#d3d3d3' }} />
+      </div>*/}
       <div>
         <label>Товар: ( Найменування, скільки штук, загальна Сума )</label>
         <input type="text" name="product" value={formData.product} onChange={handleChange} required />
