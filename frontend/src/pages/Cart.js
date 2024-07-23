@@ -5,12 +5,14 @@ import displayINRCurrency from '../helpers/displayCurrency'
 import ContactForm from './ContactForm';
 import { MdDelete } from "react-icons/md";
 
-const Cart = () => {
+const Cart = () => { 
+
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(false)
     const context = useContext(Context)
     const loadingCart = new Array(4).fill(null)
 
+   
 
     const fetchData = async() =>{
         
@@ -200,6 +202,9 @@ const Cart = () => {
                                                  
                                     />
                                     </div>
+                                 
+          
+                                  
                                    {/* <button className='bg-blue-600 hover:bg-blue-800 p-2 text-white w-full mt-2'>Підтвердити замовлення !</button> */}
 
                                 </div>

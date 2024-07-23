@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+
 import emailjs from 'emailjs-com';
 import '../ContactForm.css';
 import Cart from './Cart';
 //import {totalQty} from './Cart'
 import displayINRCurrency from '../helpers/displayCurrency'
 
+
 const ContactForm = ({totalQty}) => {
+
+
+
   const [formData, setFormData] = useState({
     product: '',
     lastName: '',
@@ -28,6 +33,8 @@ const ContactForm = ({totalQty}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+  
     
     // EmailJS parameters
     const serviceID = 'service_3tc7wn8';
