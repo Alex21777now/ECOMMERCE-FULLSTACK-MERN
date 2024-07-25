@@ -7,12 +7,11 @@ import Cart from './Cart';
 import displayINRCurrency from '../helpers/displayCurrency'
 
 
-const ContactForm = ({totalQty}) => {
-
+const ContactForm = ({totalPrice}) => {         
 
 
   const [formData, setFormData] = useState({
-    product: '',
+    //product: '',
     lastName: '',
     firstName: '',
     middleName: '',
@@ -43,6 +42,7 @@ const ContactForm = ({totalQty}) => {
 
     const templateParams = {
       ...formData,
+      product: totalPrice,
       delivery: 'УКРПОШТА',
       deliveryCost: '0 грн',
       deliveryTime: 'до 7 робочих днів',
@@ -65,12 +65,12 @@ const ContactForm = ({totalQty}) => {
     <form className="contact-form" onSubmit={handleSubmit}>
       {/*<div>
         <label>Товар: ( Кількiсть штук Загалом)</label>
-        <input type="text" value={totalQty} readOnly style={{ backgroundColor: '#d3d3d3' }} />
+        <input type="text" value={totalPrice} readOnly style={{ backgroundColor: '#d3d3d3' }} />
       </div>*/}
-      <div>
+      {/*<div>
         <label>Товар: ( Найменування, скільки штук, загальна Сума )</label>
         <input type="text" name="product" value={formData.product} onChange={handleChange} required />
-      </div>
+      </div>*/}
       <div>
         <label>Прізвище:</label>
         <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />

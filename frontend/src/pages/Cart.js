@@ -197,9 +197,12 @@ const Cart = () => {
                                     <div className='flex items-center justify-between px-4 gap-2 font-medium text-lg text-slate-600'>Введіть деталі доставки:</div>
                                     <br/>
                                     <div>
-                                    <ContactForm totalQty={totalQty}
+                                    <ContactForm totalPrice={totalPrice}
                                                  
                                                  
+                                                
+                                              //   product?.productId?.sellingPrice
+                                              //   product?.productId?.sellingPrice  * product?.quantity 
                                     />
                                     </div>
                                  
