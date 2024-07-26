@@ -7,7 +7,7 @@ import Cart from './Cart';
 import displayINRCurrency from '../helpers/displayCurrency'
 
 
-const ContactForm = ({totalPrice}) => {         
+const ContactForm = ({dataBasket, totalPrice, totalQty}) => {         
 
 
   const [formData, setFormData] = useState({
@@ -33,7 +33,7 @@ const ContactForm = ({totalPrice}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  
+    const objectAsString = JSON.stringify(dataBasket, null, 2);
     
     // EmailJS parameters
     const serviceID = 'service_3tc7wn8';
@@ -42,7 +42,9 @@ const ContactForm = ({totalPrice}) => {
 
     const templateParams = {
       ...formData,
-      product: totalPrice,
+      product: objectAsString,
+      totalKilkist: totalQty,
+      totalCina: totalPrice,
       delivery: 'УКРПОШТА',
       deliveryCost: '0 грн',
       deliveryTime: 'до 7 робочих днів',
